@@ -57,4 +57,9 @@ chatbot.train("chatterbot.corpus.english.conversations")
 ```
 pip install -r requirements
 sudo python setup.py install
+
+for chinese:
+sudo apt-get install python3-pip
+pip3 install -r requirements
+python3 install failed but it's okay as they are under same dir to run python3 cn_app.py
 ```
