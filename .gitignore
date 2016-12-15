@@ -23,3 +23,4 @@ docs/_build/
 
 examples/settings.py
 examples/ubuntu_dialogs*
+nohup.out
