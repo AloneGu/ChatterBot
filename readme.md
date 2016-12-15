@@ -1,5 +1,3 @@
-![Chatterbot: Machine learning in Python](http://i.imgur.com/b3SCmGT.png)
-
 # ChatterBot
 
 ChatterBot is a machine-learning based conversational dialog engine build in
@@ -7,17 +5,6 @@ Python which makes it possible to generate responses based on collections of
 known conversations. The language independent design of ChatterBot allows it
 to be trained to speak any language.
 
-*[Read in English](readme.md)*
-*[Leia em Português](readme.pt.md)*
-*[Leer en español](readme.es.md)*
-
-[![Package Version](https://img.shields.io/pypi/v/chatterbot.svg)](https://pypi.python.org/pypi/chatterbot/)
-[![Requirements Status](https://requires.io/github/gunthercox/ChatterBot/requirements.svg?branch=master)](https://requires.io/github/gunthercox/ChatterBot/requirements/?branch=master)
-[![Build Status](https://travis-ci.org/gunthercox/ChatterBot.svg?branch=master)](https://travis-ci.org/gunthercox/ChatterBot)
-[![Documentation Status](https://readthedocs.org/projects/chatterbot/badge/?version=stable)](http://chatterbot.readthedocs.io/en/stable/?badge=stable)
-[![Coverage Status](https://img.shields.io/coveralls/gunthercox/ChatterBot.svg)](https://coveralls.io/r/gunthercox/ChatterBot)
-[![Code Climate](https://codeclimate.com/github/gunthercox/ChatterBot/badges/gpa.svg)](https://codeclimate.com/github/gunthercox/ChatterBot)
-[![Join the chat at https://gitter.im/chatter_bot/Lobby](https://badges.gitter.im/chatter_bot/Lobby.svg)](https://gitter.im/chatter_bot/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 An example of typical input would be something like this:
 
@@ -26,34 +13,10 @@ An example of typical input would be something like this:
 > **user:** You're welcome.  
 > **bot:** Do you like hats?  
 
-## How it works
-
-An untrained instance of ChatterBot starts off with no knowledge of how to communicate. Each time a user enters a statement, the library saves the text that they entered and the text that the statement was in response to. As ChatterBot receives more input the number of responses that it can reply and the accuracy of each response in relation to the input statement increase. The program selects the closest matching response by searching for the closest matching known statement that matches the input, it then returns the most likely response to that statement based on how frequently each response is issued by the people the bot communicates with.
-
-## Installation
-
-This package can be installed from [PyPi](https://pypi.python.org/pypi/ChatterBot) by running:
-
-```
-pip install chatterbot
-```
 
 ## Basic Usage
 
-```
-from chatterbot import ChatBot
-
-chatbot = ChatBot(
-    'Ron Obvious',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
-)
-
-# Train based on the english corpus
-chatbot.train("chatterbot.corpus.english")
-
-# Get a response to an input statement
-chatbot.get_response("Hello, how are you today?")
-```
+check examples
 
 # Training data
 
@@ -75,58 +38,23 @@ chatbot.train("chatterbot.corpus.english.greetings")
 chatbot.train("chatterbot.corpus.english.conversations")
 ```
 
-**Corpus contributions are welcome! Please make a pull request.**
-
-# [Documentation](http://chatterbot.readthedocs.io/)
-
-View the [documentation](http://chatterbot.readthedocs.io/)
-for ChatterBot on Read the Docs.
-
-To build the documentation yourself using [Sphinx](http://www.sphinx-doc.org/), run:
-
-```
-sphinx-build -b html docs/ build/
-```
-
-# Examples
-
-For examples, see the [examples](https://github.com/gunthercox/ChatterBot/tree/master/examples)
-directory in this project's git repository.
-
-There is also an example [Django project using ChatterBot](https://github.com/gunthercox/django_chatterbot), as well as an example [Flask project using ChatterBot](https://github.com/chamkank/flask-chatterbot).
-
-# History
-
-See release notes for changes https://github.com/gunthercox/ChatterBot/releases
-
-# Development pattern for contributors
-
-1. [Create a fork](https://help.github.com/articles/fork-a-repo/) of
-   the [main ChatterBot repository](https://github.com/gunthercox/ChatterBot) on GitHub.
-2. Make your changes in a branch named something different from `master`, e.g. create
-   a new branch `my-pull-request`.
-3. [Create a pull request](https://help.github.com/articles/creating-a-pull-request/).
-4. Please follow the [Python style guide for PEP-8](https://www.python.org/dev/peps/pep-0008/).
-5. Use the projects [built-in automated testing](http://chatterbot.readthedocs.io/en/latest/testing.html)
-   to help make sure that your contribution is free from errors.
-
-# License
-
-ChatterBot is licensed under th [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause).
-
 # flask-chatterbot
 
 #### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
 
 ## Local Setup:
  1. Ensure that Python, Flask, and ChatterBot are installed.
- 2. Run *app.py*
+ 2. Run *app.py* ( in backend: nohup python app.py & )
  3. Base URL will be [http://localhost:5000/](http://localhost:5000/)
+ 4. try chat in terminal? python interact_run.py
 
 ## Usage example:
 *   [/get/how are you?](http://localhost:5000/get/how are you?)
   *   Browser handles whitespace for you ([/get/how%20are%20you?](http://localhost:5000))
   *   Returns raw response (ex: I am good).
 
-##How do I deploy this to a web server?
-If you do not have a dedicated server, I highly recommend using [PythonAnywhere](pythonanywhere.com/) or [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.
+# all install under ubuntu
+```
+pip install -r requirements
+sudo python setup.py install
+```
