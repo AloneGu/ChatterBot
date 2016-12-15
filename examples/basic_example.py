@@ -5,6 +5,6 @@ from chatterbot import ChatBot
 chatbot = ChatBot("Charlie")
 
 # Get a response to the input "How are you?"
-response = chatbot.get_response("How are you?")
+response = chatbot.get_response("What was the name of the first artificial Earth satellite?")
 
 print(response)
