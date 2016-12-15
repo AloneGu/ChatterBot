@@ -10,9 +10,11 @@ english_bot = ChatBot("English Bot")
 english_bot.set_trainer(ChatterBotCorpusTrainer)
 english_bot.train("chatterbot.corpus.english")
 
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 @app.route("/get/<string:query>")
 def get_raw_response(query):
@@ -20,4 +22,4 @@ def get_raw_response(query):
 
 
 if __name__ == "__main__":
-    app.run(port=PORT)
+    app.run(port=PORT, host='0.0.0.0')
