@@ -53,7 +53,7 @@ chatbot.train("chatterbot.corpus.english.conversations")
   *   Browser handles whitespace for you ([/get/how%20are%20you?](http://localhost:5000))
   *   Returns raw response (ex: I am good).
 
-# all install under ubuntu
+## all install under ubuntu ( python3 for chinese? )
 ```
 pip install -r requirements
 sudo python setup.py install
