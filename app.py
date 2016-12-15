@@ -2,6 +2,8 @@ from flask import Flask, render_template
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+PORT = 8003
+
 app = Flask(__name__)
 
 english_bot = ChatBot("English Bot")
@@ -18,4 +20,4 @@ def get_raw_response(query):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=PORT)
