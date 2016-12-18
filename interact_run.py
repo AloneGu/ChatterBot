@@ -1,9 +1,9 @@
 import requests
 
 while(True):
+    print 'A:',
     s = raw_input()
-    #print s
-    url = 'http://0.0.0.0:8003/get/{}'.format(s)
-    #print url
+    url = 'http://101.200.49.134:8003/get/{}'.format(s)
     res = requests.get(url)
+    print 'B:',
     print res.text
